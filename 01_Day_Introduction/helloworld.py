@@ -1,25 +1,41 @@
-# Introduction
 # Day 1 - 30DaysOfPython Challenge
 
-print("Hello World!")   # print hello world
+print(3+4);
+print(3-4);
+print(3*4);
+print(3%4);
+print(3/4);
+print(3**4);
+print(3//4);
 
-print(2 + 3)   # addition(+)
-print(3 - 1)   # subtraction(-)
-print(2 * 3)   # multiplication(*)
-print(3 + 2)   # addition(+)
-print(3 - 2)   # subtraction(-)
-print(3 * 2)   # multiplication(*)
-print(3 / 2)   # division(/)
-print(3 ** 2)  # exponential(**)
-print(3 % 2)   # modulus(%)
-print(3 // 2)  # Floor division operator(//)
+print("Giuseppe")
+print("Guerrini")
+print("Italy")
 
-# Checking data types
+print(type(10))
+print(type(9.8))
+print(type(3.14))
+print(type(4-4j))
+print(type(['Asabeneh', 'Python', 'Finland'])) #list
+print(type("Giuseppe"))
+print(type("Guerrini"))
+print(type("Italy"))
 
-print(type(10))                  # Int
-print(type(3.14))                # Float
-print(type(1 + 3j))              # Complex
-print(type('Asabeneh'))          # String
-print(type([1, 2, 3]))           # List
-print(type({'name': 'Asabeneh'}))  # Dictionary
-print(type({9.8, 3.14, 2.7}))    # Tuple
+"""
+Write an example for different Python data types such as Number(Integer, Float, Complex), String, Boolean, List, Tuple, Set and Dictionary.
+Find an Euclidean distance between (2, 3) and (10, 8)
+"""
+
+print(type(1)); #integer
+print(type(1.1));   #float
+print(type(1 + 1j));    #complex
+print(type("Uno")); #string
+print(type(True));  #boolean
+print(type(['Primo', 'Secondo', 1]));   #list
+print(type((1, 3)));    #tuple
+print(type({1, 3}));    #set
+print(type({"1": "uno", "2": "due"}));  #dictionary
+
+#Euclidian distance on 2D is calculated with d(p, q) = (q1-p1)^2 + (q2-p2)^2
+d = (10-2)**2 + (8-3)**2;
+print("Euclidian distance between p and q: ", d);
