@@ -62,9 +62,9 @@ while(c <= 10):
     print(f'{c} x {c} = {c*c}')
     c+=1
 
-# Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print out the items.
-list = ['Python', 'Numpy','Pandas','Django', 'Flask']
-for item in list:
+# Iterate through the lst, ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print out the items.
+lst = ['Python', 'Numpy','Pandas','Django', 'Flask']
+for item in lst:
     print(item)
 # Use for loop to iterate from 0 to 100 and print only even numbers
 for n in range(0,101,2):
@@ -293,7 +293,7 @@ countries = [
 for country in countries: 
     if 'land' in country:
         print(country)
-# This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
+# This is a fruit lst, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
 fruits = ['banana', 'orange', 'mango', 'lemon']
 rev_fruit = [];
 c = len(fruits) - 1;
@@ -2929,4 +2929,30 @@ for country_data in countries_data:
 else:
     print(len(set(languages)))
 # Find the ten most spoken languages from the data
+
+languages_occ = dict();
+
+for country_data in countries_data:
+    for language in country_data["languages"]:
+        if language not in languages_occ:
+            languages_occ[language] = 1
+        else:
+            languages_occ[language] += 1
+else:
+    languages_occ_lst = languages_occ.items();
+    new_l_occ = [];
+    for key, value in languages_occ_lst:
+        new_l_occ.append([value, key])
+
+    new_l_occ.sort(reverse=True);
+    print(new_l_occ[0:10]);    
+        
+
+
 # Find the 10 most populated countries in the world
+countries_data_lst = []
+for country_data in countries_data:
+    countries_data_lst.append((country_data["population"], country_data["name"]))
+
+countries_data_lst.sort(reverse=True)
+print(countries_data_lst[0:10])
